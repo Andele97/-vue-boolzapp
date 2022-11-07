@@ -51,11 +51,15 @@
         </div>
 
         <div class="cont-contact">
-          <div class="contact">
-            <img src="assets/img/avatar_1.jpg" alt="">
+          <div
+          v-for="(contact, index) in contacts" 
+          class="contact">
+            <img 
+            :src="'assets/img/avatar' + contact.avatar + '.jpg'" 
+            :alt="contact.name">
             <div class="info">
-              <div class="name">Michele</div>
-              <div class="lastMessage">Ultimo messaggio inviato</div>
+              <div class="name">{{contact.name}}</div>
+              <div class="lastMessage">{{contact.}}</div>
             </div>  
           </div>
         </div>  
