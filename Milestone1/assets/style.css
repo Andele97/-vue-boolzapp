@@ -3,3 +3,77 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  height: 100vh;
+  background: rgb(0,150,136);
+  background: linear-gradient(180deg, rgba(0,150,136,1) 10%, rgba(218,219,211,1) 10%, rgba(218,219,211,1) 100%); 
+  background-repeat: no-repeat;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  height: 95%;
+  display: flex;
+  background-color: blue;
+}
+
+.container .contacts {
+  width: 35%;
+  height: 100%;
+  background-color: rgb(218, 34, 218);
+}
+
+.container .messages {
+  width: 65%;
+  height: 100%;
+  background-color: aqua;
+}
+
+.bar {
+  height: 60px;
+  padding: 10px;
+  background-color: #EAEAEA;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bar:first-of-type {
+  border-right: 2px solid #D9D9D9;
+}
+
+.bar .user {
+  display: flex;
+  align-items: center;
+}
+
+.bar .user img{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.bar .name {
+  font-size: 0.9em;
+}
+
+.bar .user .info {
+  padding-left: 15px;
+}
+
+.bar .user .info .connect {
+  font-size: 0.8em;
+  color: gray;
+}
+
+.bar .attachment i {
+  padding: 5px;
+}
