@@ -8,7 +8,7 @@
 body {
   height: 100vh;
   background: rgb(0,150,136);
-  background: linear-gradient(180deg, rgba(0,150,136,1) 10%, rgba(218,219,211,1) 10%, rgba(218,219,211,1) 100%); 
+  background: linear-gradient(rgba(0,150,136,1) 10%, rgba(218,219,211,1) 10%, rgba(218,219,211,1) 100%); 
   background-repeat: no-repeat;
 }
 
@@ -67,7 +67,7 @@ main {
 
 .contacts .search {
   background-color: #FAFAFA;
-  height: 5%;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,8 +92,13 @@ main {
   border: 1px solid lightgray;
 }
 
+.contacts .cont-contact {
+  height: calc(100vh - 246px);
+  overflow-y: scroll;
+}
+
 .contacts .contact {
-  height: 8%;
+  height: 80px;
   width: 100%;
   background-color: white;
   border-bottom: 1px solid lightgray;
@@ -182,7 +187,57 @@ main {
 .messages .chat {
   height: calc(100% - 120px);
   background-image: url(img/mine.jpg);
-  overflow: auto;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.chat .me {
+  width: 90%;
+  height: min-content;
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+
+.chat .msn {
+  padding: 1.5%;
+  width: min-content;
+  border-radius: 10px;
+  background-color: #D5F9BA;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat .msn i {
+  font-size: 0.6em;
+  text-align: end;
+  color: gray;
+  cursor: pointer;
+  display: none;
+}
+
+.chat .msn i:hover {
+  display: block;
+}
+
+.chat .msn .hours {
+  font-size: 0.6em;
+  text-align: end;
+  margin-top: 5px;
+  color: gray;
+}
+
+.chat .people .msn {
+  background-color: white;
+}
+
+.chat .people {
+  width: 90%;
+  height: min-content;
+  margin-left: 90px;
 }
 
 .write {
