@@ -219,7 +219,7 @@ main {
   display: none;
 }
 
-.chat .msn i:hover {
+.chat .msn:hover i {
   display: block;
 }
 
