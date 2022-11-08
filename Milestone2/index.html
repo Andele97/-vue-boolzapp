@@ -53,6 +53,7 @@
         <div class="cont-contact">
           <div
           v-for="(contact, index) in contacts" 
+         
           class="contact">
             <img 
             :src="'assets/img/avatar' + contact.avatar + '.jpg'" 
@@ -72,9 +73,11 @@
         <!-- BAR -->
         <div class="bar">
           <div class="user">
-            <img src="assets/img/avatar_1.jpg" alt="">
+            <img 
+            :src="'assets/img/avatar' + contact.avatar + '.jpg'" 
+            :alt="contact.name">
             <div class="info">
-              <div class="name">Michele</div>
+              <div class="name">{{contacts.name[openChat].name}}</div>
               <div class="connect">Ultimo accesso oggi alle 12:00</div>
             </div>
           </div>

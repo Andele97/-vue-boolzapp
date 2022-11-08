@@ -166,6 +166,16 @@ createApp({
           ],
         },
       ],
+      openChat: 0,
     };
   },
+
+  methods: {
+
+    changeChat(i){
+      this.contacts[this.openChat].visible = true;
+      this.openChat = i;
+      this.contacts[i].visible = false;
+    }
+  }
 }).mount('#app');
