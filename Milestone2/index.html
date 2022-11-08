@@ -53,7 +53,8 @@
         <div class="cont-contact">
           <div
           v-for="(contact, index) in contacts" 
-         
+          :class="contact.visible"
+          @click="changeChat(index)"
           class="contact">
             <img 
             :src="'assets/img/avatar' + contact.avatar + '.jpg'" 
@@ -74,10 +75,10 @@
         <div class="bar">
           <div class="user">
             <img 
-            :src="'assets/img/avatar' + contact.avatar + '.jpg'" 
-            :alt="contact.name">
+            :src="'assets/img/avatar' + contacts[openChat].avatar + '.jpg'" 
+            :alt="">
             <div class="info">
-              <div class="name">{{contacts.name[openChat].name}}</div>
+              <div class="name">{{contacts[openChat].name}}</div>
               <div class="connect">Ultimo accesso oggi alle 12:00</div>
             </div>
           </div>
@@ -91,18 +92,22 @@
         
         <!-- CHAT -->
         <div class="chat">
-          <div class="people">
+          <div
+          v-for="(msg, index) in contacts[openChat].messages" 
+          class="people">
             <div class="msn">
               <i class="fa-solid fa-chevron-down"></i>
-              <p>dadad</p>
-              <div class="hours">12:30</div>
+              <p>{{msg.message}}</p>
+              <div class="hours">{{msg.date}}</div>
             </div>
           </div>
-          <div class="me">
+          <div 
+          v-for="(msg, index) in contacts[openChat].messages"
+          class="me">
             <div class="msn">
               <i class="fa-solid fa-chevron-down"></i>
-              <p>sasa</p>
-              <div class="hours">12:30</div>
+              <p>{{msg.message}}</p>
+              <div class="hours">{{msg.date}}</div>
             </div>
           </div>
         </div>

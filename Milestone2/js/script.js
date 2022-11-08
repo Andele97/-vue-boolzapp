@@ -176,6 +176,6 @@ createApp({
       this.contacts[this.openChat].visible = true;
       this.openChat = i;
       this.contacts[i].visible = false;
-    }
-  }
+    },
+  },
 }).mount('#app');
