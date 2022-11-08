@@ -196,15 +196,13 @@ main {
 
 .chat .me {
   width: 90%;
-  height: min-content;
   display: flex;
   justify-content: end;
-  position: relative;
+  padding-right: 30px;
 }
 
 .chat .msn {
-  padding: 1.5%;
-  width: min-content;
+  padding: 2%;
   border-radius: 10px;
   background-color: #D5F9BA;
   margin-bottom: 5px;
@@ -236,9 +234,8 @@ main {
 }
 
 .chat .people {
-  width: 90%;
-  height: min-content;
-  margin-left: 90px;
+  width: 70%;
+  padding-left: 90px;
 }
 
 .write {

@@ -167,6 +167,8 @@ createApp({
         },
       ],
       openChat: 0,
+      newMsg: '',
+      time: new Date()
     };
   },
 
@@ -177,5 +179,27 @@ createApp({
       this.openChat = i;
       this.contacts[i].visible = false;
     },
+
+    newMessage(){
+      const newMsgUser = {
+        date: '8/11/2022',
+        hour: this.time.getHours() + ':' + this.time.getMinutes(),
+        message: this.newMsg,
+        status: 'sent'
+      }
+      this.contacts[this.openChat].messages.push(newMsgUser);
+      this.newMsgUser = '';
+      setTimeout(this.answerPc, 1500);
+    },
+
+    answerPc(){
+      const msgAnswerPc = {
+        date: '8/11/2022',
+        hour: this.time.getHours() + ':' + this.time.getMinutes(),
+        message: 'OK!!',
+        status: 'received'
+      }
+      this.contacts[this.openChat].messages.push(msgAnswerPc);
+    }
   },
 }).mount('#app');
