@@ -27,6 +27,7 @@ main {
 }
 /* CONTACTS */
 .container .contacts {
+  min-width: 240px;
   width: 35%;
   height: 100%;
   background-color: white;
@@ -130,6 +131,7 @@ main {
 /* /CONTACTS */
 
 .container .messages {
+  min-width: 320px;
   width: 65%;
   height: 100%;
   background-color: aqua;
