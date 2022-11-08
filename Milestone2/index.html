@@ -93,17 +93,8 @@
         <!-- CHAT -->
         <div class="chat">
           <div
-          v-for="(msg, index) in contacts[openChat].messages" 
-          class="people">
-            <div class="msn">
-              <i class="fa-solid fa-chevron-down"></i>
-              <p>{{msg.message}}</p>
-              <div class="hours">{{msg.date}}</div>
-            </div>
-          </div>
-          <div 
           v-for="(msg, index) in contacts[openChat].messages"
-          class="me">
+          :class="msg.status === 'sent' ?'me' : 'people'">
             <div class="msn">
               <i class="fa-solid fa-chevron-down"></i>
               <p>{{msg.message}}</p>
