@@ -47,13 +47,19 @@
 
         <div class="search">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" placeholder="Cerca o inizia una nuova chat">
+          <input 
+          v-model="searchName"
+          @input="searchInput(searchName)"
+          type="text" 
+          placeholder="Cerca o inizia una nuova chat">
         </div>
 
-        <div class="cont-contact">
+        <div 
+        class="cont-contact" 
+        v-if="searchContact.length == 0">
           <div
           v-for="(contact, index) in contacts" 
-          :class="contact.visible"
+          :class="!contact.visible"
           @click="changeChat(index)"
           class="contact">
             <img 

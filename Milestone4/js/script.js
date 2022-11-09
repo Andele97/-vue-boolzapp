@@ -168,7 +168,9 @@ createApp({
       ],
       openChat: 0,
       newMsg: '',
-      time: new Date()
+      time: new Date(),
+      searchContact: [],
+      searchName: ''
     };
   },
 
@@ -188,8 +190,8 @@ createApp({
         status: 'sent'
       }
       this.contacts[this.openChat].messages.push(newMsgUser);
-      this.newMsgUser = '';
-      setTimeout(this.answerPc, 1500);
+      this.newMsgUser = "";
+      setTimeout(this.answerPc, 2000);
     },
 
     answerPc(){
@@ -200,6 +202,17 @@ createApp({
         status: 'received'
       }
       this.contacts[this.openChat].messages.push(msgAnswerPc);
+    },
+
+    searchInput(searchName) {
+      this.searchContact = this.contacts.filter(contact => contact.name.toLowerCase().includes(searchName.toLowerCase()))
+    },
+
+    searchChat(i){
+      this.contacts[this.openChat].visible = true;
+      this.searchContact[this.openChat].visible = true;
+      this.openchat = i;
+      this.searchContact[this.openChat].visible = false;
     }
   },
 }).mount('#app');
